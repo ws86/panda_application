@@ -17,6 +17,19 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	
+<distributionManagement>
+	<repository>
+		<id>artifactory</id>
+		<name>release</name>
+		<url>http://192.168.44.44:8081/artifactory/libs-release-local/</url>
+	</repository>
+	<snapshotRepository>
+		<id>artifactory</id>
+		<name>snapshots</name>
+		<url>http://192.168.44.44:8081/artifactory/libs-release-local/</url>
+	</snapshotRepository>
+</distributionManagement>
 
 	<dependencies>
 		<dependency>
