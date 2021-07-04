@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.Platform;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -32,7 +32,7 @@ public class PandaApplicationSeleniumTest {
         //DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         //capabilities.setPlatform(Platform.LINUX);
         FirefoxOptions capabilities=new FirefoxOptions();
-        driver = new RemoteWebDriver("marionette", true);
+        capabilities.setCapability("marionette", true);
 
         // Odwołujemy się do zdalnego silnika Firefox z Selenium Grid
         driver = new RemoteWebDriver(new URL("http://192.168.44.44:4444/wd/hub"), capabilities);
