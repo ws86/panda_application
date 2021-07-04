@@ -39,7 +39,7 @@ public class PandaApplicationSeleniumTest {
         driver.get(String.format("http://ubuntuslave:%s/", port));
 
         //Czekamy 2 sekundy
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Test
